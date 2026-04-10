@@ -2,12 +2,12 @@ package ru.netology.statistic;
 
 public class StatisticsService {
     public long findMax(long[] incomes) {
-        long max = incomes[0];
+        long currentMax = incomes[0];
         for (long income : incomes) {
-            if (income > max) {
-                max = income;
+            if (currentMax < income) {
+                currentMax = income;
             }
         }
-        return max;
+        return currentMax;
     }
 }
